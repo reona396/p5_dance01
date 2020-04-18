@@ -7,7 +7,6 @@ let poseNet;
 let poses = [];
 
 let particles = [];
-let e = new p5.Ease();
 let ox, oy;
 let colors = [];
 const canvasScale = 0.5;
@@ -117,7 +116,7 @@ function Particle(tmpX, tmpY, tmpC, tmpRmax) {
 
 	this.display = function () {
 		if (!this.isDeg) {
-			this.r = this.rMax * e.circularOut(this.delta);
+			this.r = this.rMax * circularOut(this.delta);
 
 			this.delta += this.speed;
 			if (this.delta > 1.0) {
@@ -125,7 +124,7 @@ function Particle(tmpX, tmpY, tmpC, tmpRmax) {
 				this.isDeg = true;
 			}
 		} else {
-			this.r = this.rMax * e.circularOut(this.delta);
+			this.r = this.rMax * circularOut(this.delta);
 
 			this.delta -= this.speed * 1.5;
 			if (this.delta < 0.0) {
@@ -161,4 +160,8 @@ function Particle(tmpX, tmpY, tmpC, tmpRmax) {
 		this.pos.y -= this.ySpeed;
 		this.xNoise += 0.01;
 	}
+}
+
+function circularOut(_x) {
+	return(sqrt((2 - _x) * _x));
 }
