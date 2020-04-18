@@ -1,5 +1,5 @@
 # p5_dance01
-これ↓のコード管理用 :
+これ↓のコード管理用 :  
 [Dance and Animation ver\.0\.1\.0 \- OpenProcessing](https://www.openprocessing.org/sketch/846026)
 
 ## 更新履歴
