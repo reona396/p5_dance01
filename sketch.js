@@ -162,6 +162,8 @@ function Particle(tmpX, tmpY, tmpC, tmpRmax) {
 	}
 }
 
+// p5.func
+// https://idmnyu.github.io/p5.js-func/
 function circularOut(_x) {
 	return(sqrt((2 - _x) * _x));
 }
